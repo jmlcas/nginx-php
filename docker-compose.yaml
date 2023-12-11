@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+    nginx-php-fpm:
+        image: richarvey/nginx-php-fpm
+        container_name: nginx-php
+        ports:
+            - "80:80"
+            - "443:443"
+        restart: unless-stopped
